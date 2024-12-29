@@ -2,7 +2,12 @@ from django.shortcuts import render
 
 
 def index(request):
-  return render(request, 'home/index.html')
+  template_data = {}
+  template_data['title'] = 'Movie Store'
+
+  return render(request, 'home/index.html', {
+    'template_data': template_data
+  })
 
 
 def about(request):
