@@ -1,4 +1,4 @@
-.bg-index {
-  background: url("/static/img/bg.jpg") no-repeat fixed;
+.banner-index {
+  background: url("/static/img/banner.jpg") no-repeat fixed;
   background-size: 100% auto;
 }
