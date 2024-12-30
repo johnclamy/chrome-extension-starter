@@ -22,8 +22,55 @@
     <link rel="stylesheet" href="{% static "css/style.css" %}">
   </head>
   <body>
-    <!-- Header -->
-    <!-- Header -->
+    <!-- Navbar -->
+    <nav class="px-3 navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home.index' %}">
+          <img
+            src="{% static 'img/logo.jpg' %}"
+            alt="logo"
+            width="30"
+            height="24"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="{% url 'home.index' %}"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'home.about' %}">About</a>
+            </li>
+          </ul>
+          <section class="d-lg-flex flex-lg-row">
+            <button type="button" class="btn btn-dark">Register</button>
+            <button
+              type="button"
+              class="btn btn-success ms-lg-3 d-block mt-3 mt-lg-0"
+            >
+              Sign in
+            </button>
+          </section>
+        </div>
+      </div>
+    </nav>
+    <!-- Page content -->
     <main class="p-3">{% block content %}{% endblock content %}</main>
     <!-- Footer -->
     <!-- Footer -->
