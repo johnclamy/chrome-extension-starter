@@ -1,28 +1,18 @@
-{% extends "base.html" %} {% block content %} {% load static %}
-<div class="container">
-  <article class="row mt-3">
-    <header class="col-md-6 mx-auto mb-3">
-      <h1 class="h2">{{ template_data.movie.title }}</h1>
-      <hr />
-    </header>
-    <section>
-      <div>
-        <p>
-          <b class="text-capitalize">description:</b> {{
-          template_data.movie.descr }}
-        </p>
-        <p>
-          <b class="text-capitalize">price:</b> {{ template_data.movie.price }}
-        </p>
+{% extends 'base.html' %} {% block content %} {% load static %}
+<div class="card my-2 mx-1">
+  <div class="container">
+    <section class="col-md-10 col-lg-8 offset-lg-2 mx-auto mb-3">
+      <img
+        src="{% static 'img/about.jpg' %}"
+        class="card-img-top"
+        alt="{{ template_data.movie.title }}"
+      />
+      <div class="card-body">
+        <h1 class="h5 card-title">{{ template_data.movie.title }}</h1>
+        <p class="card-text">{{ template_data.movie.descr }}</p>
+        <p class="card-text fs-4">£{{ template_data.movie.price }}.00</p>
       </div>
-      <figure class="col-md-6 mx-auto mb-3 text-center">
-        <img
-          src="{% static 'img/about.jpg' %}"
-          alt="{{ template_data.movie.title }}"
-          class="rounded"
-        />
-      </figure>
     </section>
-  </article>
+  </div>
 </div>
 {% endblock content %}
