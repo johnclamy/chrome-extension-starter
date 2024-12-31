@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+<div class="container">
+  <article class="row mt-3">
+    <header class="col-md-6 mx-auto mb-3">
+      <h1 class="h2">{{ template_data.movie.title }}</h1>
+      <hr />
+    </header>
+    <section>
+      <div>
+        <p>
+          <b class="text-capitalize">description:</b> {{
+          template_data.movie.descr }}
+        </p>
+        <p>
+          <b class="text-capitalize">price:</b> {{ template_data.movie.price }}
+        </p>
+      </div>
+      <figure class="col-md-6 mx-auto mb-3 text-center">
+        <img
+          src="{% static 'img/about.jpg' %}"
+          alt="{{ template_data.movie.title }}"
+          class="rounded"
+        />
+      </figure>
+    </section>
+  </article>
+</div>
+{% endblock content %}
