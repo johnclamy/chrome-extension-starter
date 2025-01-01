@@ -13,9 +13,9 @@
     <div class="col-md-4 col-lg-3 mb-2">
       <section class="p-2 card align-items-center pt-4">
         <img
-          src="{% static 'img/about.jpg' %}"
-          alt=""
-          class="card-img-top rounded"
+          src="{{ movie.image.url }}"
+          alt="{{ movie.title }}"
+          class="card-img-top rounded img-card-200"
         />
         <div class="card-body text-center">
           <a
