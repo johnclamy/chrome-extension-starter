@@ -35,6 +35,16 @@ strong {
   background-size: 100% auto;
 }
 
+.img-card-200 {
+  width: fit-content;
+  max-height: 200px;
+}
+
+.img-card-400 {
+  width: fit-content;
+  max-height: 400px;
+}
+
 /* Media Queries */
 @media (max-width: 767.98px) {
   .hero-title {
