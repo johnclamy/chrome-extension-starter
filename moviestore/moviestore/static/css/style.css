@@ -1,12 +1,12 @@
-img {
-  max-width: 100%;
-}
-
 b,
 em,
 strong {
   font-weight: normal;
   font-style: normal;
+}
+
+img {
+  max-width: 100%;
 }
 
 .hero {
@@ -33,6 +33,59 @@ strong {
 .banner-index {
   background: url("/static/img/banner.jpg") no-repeat fixed;
   background-size: 100% auto;
+}
+
+.searchbar-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.searchbar {
+  position: relative;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.searchbar:focus-within {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.01);
+  transform: translateY(-2px);
+}
+
+.searchbar-input {
+  border: 2px solid #eee;
+  border-radius: 30px;
+  padding: 15px 25px;
+  padding-right: 50px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.searchbar-input:focus {
+  border-color: rgb(6, 85, 6);
+  box-shadow: none;
+}
+
+.searchbar-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+  transition: all 0.3s ease;
+  border: none;
+  background-color: white;
+}
+
+.searchbar:focus-within .search-icon {
+  color: rgb(6, 85, 6);
+}
+
+.searchbar:focus-within .suggestions {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .img-card-200 {
