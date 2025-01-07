@@ -16,7 +16,7 @@ def signup(request):
 
     if form.is_valid():
       form.save()
-      return redirect('home.index')
+      return redirect('accounts.signin')
     else:
       template_data['form'] = form
       return render(request, 'accounts/signup.html', {'template_data': template_data})
