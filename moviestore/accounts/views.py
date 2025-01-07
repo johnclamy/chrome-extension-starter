@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from . forms import CustomUserCreationForm
+from . forms import CustomUserCreationForm, CustomErrorList
 
 
 def signup(request):
@@ -11,7 +11,7 @@ def signup(request):
     return render(request, 'accounts/signup.html', {'template_data': template_data})
   
   elif request.method == 'POST':
-    form = CustomUserCreationForm(request.POST)
+    form = CustomUserCreationForm(request.POST, error_class=CustomErrorList)
 
     if form.is_valid():
       form.save()
