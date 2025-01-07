@@ -63,11 +63,15 @@
             </li>
           </ul>
           <section class="d-lg-flex flex-lg-row">
+            {% if user.is_authenticated %}
+            <a href="{% url 'accounts.sign-out' %}" class="btn btn-dark text-uppercase">Sign out ({{ user.username }})</a>
+            {% else %}
             <a href="{% url 'accounts.signup' %}" class="btn btn-dark">Sign up</a>
             <a href="{% url 'accounts.signin' %}" class="btn btn-success ms-lg-3 d-block mt-3 mt-lg-0"
             >
               Sign in
           </a>
+          {% endif %}
           </section>
         </div>
       </div>
