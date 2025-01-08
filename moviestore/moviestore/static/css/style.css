@@ -98,6 +98,11 @@ img {
   max-height: 400px;
 }
 
+.movie-reviews-wrapper {
+  margin: 3rem 0;
+  width: 100%;
+}
+
 /* Media Queries */
 @media (max-width: 767.98px) {
   .hero-title {
