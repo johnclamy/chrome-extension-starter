@@ -56,6 +56,11 @@
                 class="text-capitalize btn btn-outline-success btn-sm"
                 >edit</a
               >
+              <a
+                href="{% url 'movies.delete_review' id=template_data.movie.id review_id=review.id %}"
+                class="text-capitalize btn btn-outline-danger btn-sm ms-3"
+                >delete</a
+              >
               {% endif %}
             </div>
           </li>
